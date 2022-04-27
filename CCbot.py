@@ -8,7 +8,7 @@ bot = telebot.TeleBot(TOKEN)
 def help(message: telebot.types.Message):
     text = "For conversion, input command:\n<original currency>\
 <target currency>\
-<amount>\n Example: JPY USD 1000\n To see the list of available currencies, use command /values"
+<amount>\n Example: yen dollar 1000\n To see the list of available currencies, use command /values"
     bot.reply_to(message, text)
 
 
