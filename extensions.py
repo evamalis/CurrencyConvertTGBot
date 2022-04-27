@@ -29,5 +29,5 @@ class CryptoConverter:
             raise ConvertionException('Cannot process this amount')
         r = requests.get(f'https://min-api.cryptocompare.com/data/price?fsym={quote_ticker}&tsyms={base_ticker}')
         total_base = json.loads(r.content)[keys[base]]
-        final_amount = float(amount)*float(total_base)
+        final_amount = round(float(amount)*float(total_base), 2)
         return final_amount
